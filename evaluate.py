@@ -49,7 +49,7 @@ elif args.dataset.lower() in "fetaqa":
                                      decoder_start_token_id=config.decoder_start_token_id,
                                      is_test=True)
 elif args.dataset.lower() in "tablesum":
-    tablesum_data = TableSumDataset(data_directory="data/sigir2020-tablesum/data/", use_multiprocessing=False)
+    tablesum_data = TableSumDataset(data_directory="data/tablesum/data/", use_multiprocessing=False)
     train_set_size = int(len(tablesum_data) * 0.8)
     valid_set_size = len(tablesum_data) - train_set_size
     train_set, valid_set = random_split(tablesum_data, [train_set_size, valid_set_size],

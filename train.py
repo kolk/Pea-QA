@@ -140,7 +140,7 @@ config = AutoConfig.from_pretrained(args.pretrained_model_name)
 def get_dataset(dataset_name):
     if dataset_name in "tablesum":
         print("Training with Tablesum Dataset....")
-        tablesum_data = TableSumDataset(data_directory="data/sigir2020-tablesum/data/", use_multiprocessing=False)
+        tablesum_data = TableSumDataset(data_directory="data/tablesum/data/", use_multiprocessing=False)
         train_set_size = int(len(tablesum_data) * 0.8)
         valid_set_size = len(tablesum_data) - train_set_size
         train_set, valid_set = random_split(tablesum_data, [train_set_size, valid_set_size], generator=torch.Generator().manual_seed(42))
