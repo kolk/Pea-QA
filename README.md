@@ -2,8 +2,13 @@
 Parameter-Efficient Abstractive Question Answering over Tables and over Text
 
 Datasets present in data directory:
-1. Cleaned version of Tablesum
-2. FeTaQA 
+1. Cleaned version of Tablesum: https://github.com/kolk/Pea-QA/tree/main/data/tablesum/data/02-simplified_tables.json
++ 'pageTitle': webpage title
++ 'caption': table title
++ 'headings': table headers
++ 'rows' : original table provided by Tablesum dataset
++ **'simplified_table'**: optionally present.  Linearized Regular representation of hierarchical table
+3. FeTaQA 
 
 Arguments for datasets to adapter-tune:
 + **FeTaQA**: fetaqa
