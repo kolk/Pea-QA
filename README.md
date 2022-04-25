@@ -47,3 +47,17 @@ python evaluate.py --batch_size 2 \
                    --pretrained_model_name "facebook/bart-large" \
                    --adapter_model_name "saved_models/fetaqa_adaptertune/checkpoint-x"
 ```
+
+To cite:
+```
+@misc{https://doi.org/10.48550/arxiv.2204.03357,
+  doi = {10.48550/ARXIV.2204.03357},
+  url = {https://arxiv.org/abs/2204.03357},
+  author = {Pal, Vaishali and Kanoulas, Evangelos and de Rijke, Maarten},
+  keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Parameter-Efficient Abstractive Question Answering over Tables or Text},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+```
