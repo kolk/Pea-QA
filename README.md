@@ -1,5 +1,4 @@
-# Pea-QA
-Parameter-Efficient Abstractive Question Answering over Tables and over Text
+# Pea-QA: Parameter-Efficient Abstractive Question Answering over Tables or Text
 
 Datasets present in data directory:
 1. Cleaned version of Tablesum: https://github.com/kolk/Pea-QA/tree/main/data/tablesum/data/02-simplified_tables.json
@@ -50,14 +49,18 @@ python evaluate.py --batch_size 2 \
 
 To cite:
 ```
-@misc{https://doi.org/10.48550/arxiv.2204.03357,
-  doi = {10.48550/ARXIV.2204.03357},
-  url = {https://arxiv.org/abs/2204.03357},
-  author = {Pal, Vaishali and Kanoulas, Evangelos and de Rijke, Maarten},
-  keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Parameter-Efficient Abstractive Question Answering over Tables or Text},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution 4.0 International}
+@inproceedings{pal-etal-2022-parameter,
+    title = "Parameter-Efficient Abstractive Question Answering over Tables or Text",
+    author = "Pal, Vaishali  and
+      Kanoulas, Evangelos  and
+      Rijke, Maarten",
+    booktitle = "Proceedings of the Second DialDoc Workshop on Document-grounded Dialogue and Conversational Question Answering",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.dialdoc-1.5",
+    pages = "41--53",
+    abstract = "A long-term ambition of information seeking QA systems is to reason over multi-modal contexts and generate natural answers to user queries. Today, memory intensive pre-trained language models are adapted to downstream tasks such as QA by fine-tuning the model on QA data in a specific modality like unstructured text or structured tables. To avoid training such memory-hungry models while utilizing a uniform architecture for each modality, parameter-efficient adapters add and train small task-specific bottle-neck layers between transformer layers. In this work, we study parameter-efficient abstractive QA in encoder-decoder models over structured tabular data and unstructured textual data using only 1.5{\%} additional parameters for each modality. We also ablate over adapter layers in both encoder and decoder modules to study the efficiency-performance trade-off and demonstrate that reducing additional trainable parameters down to 0.7{\%}-1.0{\%} leads to comparable results. Our models out-perform current state-of-the-art models on tabular QA datasets such as Tablesum and FeTaQA, and achieve comparable performance on a textual QA dataset such as NarrativeQA using significantly less trainable parameters than fine-tuning.",
 }
 ```
