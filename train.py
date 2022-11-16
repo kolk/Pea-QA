@@ -5,18 +5,16 @@ from multiprocessing import Pool
 from tqdm import tqdm
 import numpy as np
 import torch
-from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler, random_split
-from datasets import load_dataset, load_metric
+from torch.utils.data import random_split
 import transformers
-from transformers import AutoModelForSeq2SeqLM, Trainer, Seq2SeqTrainer, Seq2SeqTrainingArguments, AutoTokenizer, AutoConfig
-from transformers.models.bart import BartForConditionalGeneration, BartTokenizer, BartConfig
+from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainer, Seq2SeqTrainingArguments, AutoTokenizer, AutoConfig
+from transformers.models.bart import BartConfig
 from transformers.models.bart.modeling_bart import shift_tokens_right
 from transformers import HoulsbyConfig, PfeifferConfig
 from transformers.adapters.configuration import AdapterConfig
-from transformers.models.auto import AutoModelWithHeads, AutoModelForSeq2SeqLM
+from transformers.models.auto import AutoModelForSeq2SeqLM
 from transformers import set_seed
 from transformers.optimization import (
-    Adafactor,
     get_cosine_schedule_with_warmup,
     get_cosine_with_hard_restarts_schedule_with_warmup,
     get_linear_schedule_with_warmup,
@@ -25,9 +23,9 @@ from transformers.optimization import (
 import os
 from rouge_score import rouge_scorer, scoring
 import argparse
-from fetaqa import FeTaQaDataset, FeTaQaProcessor
-from tablesum import TableSumDataset, TableSumProcessor
-from narrativeqa import NarrativeQADataset, NarrativeQAProcessor
+from fetaqa import FeTaQaDataset
+from tablesum import TableSumDataset
+from narrativeqa import NarrativeQADataset
 
 
 os.environ["WANDB_DISABLED"] = "true"

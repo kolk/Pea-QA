@@ -14,7 +14,7 @@ parser.add_argument("--cpu", type=bool, help="Load the model in cpu")
 parser.add_argument("--pretrained_model_name", default=None, type=str,
                     help="huggingface pretrained language model name or local path to language model")
 parser.add_argument("--adapter_model_name", default=None, type=str, help="modelname or local path to model")
-parser.add_argument("--dataset", type="str", help="Dataset from [narrativeqa, tablesum, fetaqa]")
+parser.add_argument("--dataset", type=str, help="Dataset from [narrativeqa, tablesum, fetaqa]")
 parser.add_argument("--adapter_name", type=str, default=None, help='adapter name for adapter-tuning')
 args = parser.parse_args()
 
