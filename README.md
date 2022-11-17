@@ -45,6 +45,8 @@ To evaluate:
 python evaluate.py --batch_size 2 \
                    --pretrained_model_name "facebook/bart-large" \
                    --adapter_model_name "saved_models/fetaqa_adaptertune/checkpoint-x"
+                   --adapter_name "fetaqa"
+                   --dataset "fetaqa"
 ```
 
 To cite:
